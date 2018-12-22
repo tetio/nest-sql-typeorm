@@ -1,9 +1,13 @@
-import {Entity, Column, PrimaryGeneratedColumn} from 'typeorm'
+import {Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn} from 'typeorm'
+import { Country } from './country.entity';
 
-//@Entity()
+@Entity()
 export class City {
     @PrimaryGeneratedColumn() city_id: number
     @Column() city: string
-    @Column() country_id: string
+
+    @OneToOne(type => Country)
+    @JoinColumn({name: 'country_id'}) 
+    country: Country
     @Column() last_update: Date
 }
