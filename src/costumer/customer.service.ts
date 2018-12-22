@@ -25,9 +25,10 @@ export class CustumerService {
             .getMany()
     }
 
-    async findAllRentals(): Promise<Rental[]> {
+    async findAllRentals(id: number = 409): Promise<Rental[]> {
         return await this.rentalRepository
             .createQueryBuilder('rental')
+            .where('rental.customer_id = :id',{id: id})
             .leftJoinAndSelect('rental.inventory', 'inventory')
             .leftJoinAndSelect("inventory.film", "film")
             .leftJoinAndSelect("rental.customer", "customer")

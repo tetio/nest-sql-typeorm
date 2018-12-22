@@ -1,11 +1,11 @@
 import { Controller, Get } from '@nestjs/common';
-import { CustumerService } from './custumer.service'
+import { CustumerService } from './customer.service'
 import { Address } from './address.entity'
 import { Customer } from './customer.entity'
 import { Rental } from './rental.entity';
 
 @Controller('customer')
-export class CustumerController {
+export class CustomerController {
     constructor(private readonly customerService: CustumerService) { }
 
     @Get()
