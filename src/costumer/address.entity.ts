@@ -1,5 +1,5 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn } from 'typeorm'
-import { City } from './city.entity'
+import { City } from '../entity/city.entity'
 
 @Entity()
 export class Address {

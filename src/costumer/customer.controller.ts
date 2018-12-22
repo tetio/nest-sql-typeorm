@@ -1,8 +1,8 @@
 import { Controller, Get } from '@nestjs/common';
 import { CustumerService } from './customer.service'
 import { Address } from './address.entity'
-import { Customer } from './customer.entity'
-import { Rental } from './rental.entity';
+import { Customer } from '../entity/customer.entity'
+import { Rental } from '../entity/rental.entity';
 
 @Controller('customer')
 export class CustomerController {
