@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Address } from './address.entity'
+import { Address } from '../entity/address.entity'
 import { Customer } from '../entity/customer.entity'
 import { Rental } from '../entity/rental.entity';
 
